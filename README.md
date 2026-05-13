@@ -218,8 +218,9 @@
 ## 7. Автоматизированное тестирование
 
 
-![Uploading image.png…]()
+https://ctrlv.link/S8fN
 
+<img width="624" height="316" alt="hgffgjh" src="https://github.com/user-attachments/assets/fbfe0b86-e6a4-4266-a0e1-57d30a73f6f1" />
 
 
 ## 8. Баг-репорт (автотестирование)
