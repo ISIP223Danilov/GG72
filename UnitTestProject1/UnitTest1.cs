@@ -111,12 +111,21 @@ namespace UnitTestProject1
             Assert.AreEqual('A', Rot13("N")[0]);
             Assert.AreEqual('Z', Rot13("M")[0]);
         }
+
+        [TestMethod]
         public void TestMethod15()
         {
             string longStr = new string('a', 10000);
             string encoded = Rot13(longStr);
             Assert.AreEqual(longStr.Length, encoded.Length);
             Assert.AreEqual('n', encoded[0]);
+        }
+
+        [TestMethod]
+        public void TestMethod16()
+        {
+            string result = Rot13(null);
+            Assert.AreEqual("", result);
         }
 
     }

@@ -21,9 +21,15 @@ namespace GG72
         /// string encrypted = fynkcya.Rot13("Hello"); // Возвращает "Uryyb"
         /// </code>
         /// </example>
-        public static string Rot13(string text)
+        
+            public static string Rot13(string text)
         {
-            if (string.IsNullOrEmpty(text))
+            // Обработка null — возвращаем пустую строку (не null!)
+            if (text == null)
+                return string.Empty;  // или return "";
+
+            // Пустую строку возвращаем как есть
+            if (text.Length == 0)
                 return text;
 
             StringBuilder result = new StringBuilder(text.Length);
@@ -32,7 +38,6 @@ namespace GG72
             {
                 if (c >= 'A' && c <= 'Z')
                 {
-                    // Для заглавных букв
                     char shifted = (char)(c + 13);
                     if (shifted > 'Z')
                         shifted = (char)(shifted - 26);
@@ -40,7 +45,6 @@ namespace GG72
                 }
                 else if (c >= 'a' && c <= 'z')
                 {
-                    // Для строчных букв
                     char shifted = (char)(c + 13);
                     if (shifted > 'z')
                         shifted = (char)(shifted - 26);
@@ -48,7 +52,6 @@ namespace GG72
                 }
                 else
                 {
-                    // Неалфавитные символы оставляем без изменений
                     result.Append(c);
                 }
             }
