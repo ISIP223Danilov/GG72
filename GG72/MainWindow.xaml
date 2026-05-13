@@ -7,6 +7,69 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.Row="0" 
+               Text="ROT13 Шифратор / Дешифратор" 
+               FontSize="20" 
+               FontWeight="Bold" 
+               HorizontalAlignment="Center" 
+               Margin="10"/>
+
+        <!-- Поле для ввода -->
+        <TextBlock Grid.Row="1" 
+               Text="Введите текст:" 
+               FontSize="14" 
+               Margin="10,10,10,5"/>
+
+        <TextBox x:Name="InputTextBox" 
+             Grid.Row="2" 
+             Height="100" 
+             Margin="10" 
+             AcceptsReturn="True" 
+             TextWrapping="Wrap"
+             VerticalScrollBarVisibility="Auto" TextChanged="InputTextBox_TextChanged"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="3" 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center" 
+                Margin="10">
+            <Button x:Name="EncodeButton" 
+                Content="Зашифровать (ROT13)" 
+                Width="150" 
+                Height="40" 
+                Margin="5" 
+                Click="EncodeButton_Click"/>
+            <Button x:Name="DecodeButton" 
+                Content="Расшифровать (ROT13)" 
+                Width="150" 
+                Height="40" 
+                Margin="5" 
+                Click="DecodeButton_Click"/>
+        </StackPanel>
+
+        <!-- Поле для вывода -->
+        <TextBlock Grid.Row="4" 
+               Text="Результат:" 
+               FontSize="14" 
+               Margin="10,10,10,5"/>
+
+        <TextBox x:Name="OutputTextBox" 
+             Grid.Row="5" 
+             Height="100" 
+             Margin="10" 
+             AcceptsReturn="True" 
+             TextWrapping="Wrap"
+             VerticalScrollBarVisibility="Auto"
+             IsReadOnly="True"
+             Background="#F5F5F5"/>
     </Grid>
 </Window>
