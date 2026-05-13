@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GG72
 {
-    internal class Fynkcya
+    public class Fynkcya
     {
         /// <summary>
         /// Шифрует или дешифрует строку с использованием шифра ROT13.
