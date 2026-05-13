@@ -40,7 +40,7 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void TestMethood5()
+        public void TestMethod5()
         {
             string text = "david is the best david in the second world war";
             string text2 = "qnivq vf gur orfg cbgngb va gur frpbaq jbeyq jne";
